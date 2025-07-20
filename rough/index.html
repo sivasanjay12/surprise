@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fireworks v2.0.css">
+    <title>FireWorks</title>
+  </head>
+  <body>  
+    <!-- <button onclick="play()"><audio src="./music/Remo Birthday Bgm Mp3 Download.mp3" controls="autoplay"></audio> click</button> -->
+      <button id="playButton" onclick="play()">🎉 Click to add some magic 🎉</button>
+
+    <audio id="audioPlayer" src="./music/Remo Birthday Bgm Mp3 Download.mp3"></audio>
+    <canvas id="canvas"></canvas>
+    <div class="block-audio">
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp1.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp1.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp1.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp2.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp2.mp3" controls="autoplay"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp2.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp3.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp3.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp3.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp4.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp4.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp4.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp5.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp5.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp5.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp6.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp6.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp6.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp7.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp7.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp7.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp8.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp8.mp3" controls="controls"></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp8.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch1.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch1.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch2.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch2.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch3.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch3.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch4.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch4.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch5.mp3" controls="controls"></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch5.mp3" controls="controls"></audio>
+    </div>
+    
+       <!-- <canvas id="birthdayCanvas"></canvas> -->
+      <button id="playButton" class="space" ><a href="./letter.html">click to next page</a> </button>
+
+    <script src="jQuery.js"></script>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            // Play audio
+            var audio = document.getElementById('audioPlayer');
+            audio.play().catch(e => {
+                console.log("Autoplay prevented: ", e);
+                // Fallback: Show a message if autoplay is blocked
+                alert("Please allow audio to play for the full experience!");
+            });
+            
+            // Hide button with fade out effect
+            this.style.transition = "opacity 0.5s ease";
+            this.style.opacity = "0";
+            
+            // Remove button after fade out completes
+            setTimeout(() => {
+                this.classList.add('hidden');
+            }, 500);
+            
+            // Start fireworks (assuming you have a play() function)
+            if(typeof play === 'function') {
+                play();
+            }
+        });
+
+    </script>
+      
+
+      
+
+    <script src="fireworks v2.0.js"></script>
+  </body>
+</html>
